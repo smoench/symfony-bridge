@@ -41,7 +41,7 @@ abstract class BrefKernel extends Kernel
      *
      * @see https://github.com/brefphp/symfony-bridge/pull/37
      */
-    public function handle($request, $type = HttpKernelInterface::MAIN_REQUEST, $catch = true): Response
+    public function handle(Request $request, int $type = self::MAIN_REQUEST, bool $catch = true): Response
     {
         $this->prepareCacheDir(parent::getCacheDir(), $this->getCacheDir());
 
